@@ -1,14 +1,15 @@
 #include<stdio.h>
 #include<math.h>
-int main ()
+int main()
 {
-    int n, r, sum=0, flag;
-    scanf("%d", &n);
-    flag=n;
-    for(n; n>0; n=n/10)
+    int num, r, flag, sum=0;
+    scanf("%d", &num);
+    flag=num;
+    while(num>0)
     {
-        r=n%10;
+        r=num%10;
         sum+=pow(r,3);
+        num=num/10;
     }
     if(sum==flag)
         printf("Armstrong Number");
